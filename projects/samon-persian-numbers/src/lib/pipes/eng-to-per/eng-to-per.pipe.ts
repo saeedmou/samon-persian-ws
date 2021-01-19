@@ -3,7 +3,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({
   name: 'EngToPer'
 })
-export class EngToPerPipe implements PipeTransform {
+export  class EngToPerPipe implements PipeTransform {
 
   transform(value: number | string ,...args: unknown[]): string {
     if (value === null || value === undefined) {

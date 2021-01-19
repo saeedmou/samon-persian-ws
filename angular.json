@@ -42,6 +42,126 @@
           }
         }
       }
+    },
+    "samon-persian-demo-app": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "sass"
+        }
+      },
+      "root": "projects/samon-persian-demo-app",
+      "sourceRoot": "projects/samon-persian-demo-app/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/samon-persian-demo-app",
+            "index": "projects/samon-persian-demo-app/src/index.html",
+            "main": "projects/samon-persian-demo-app/src/main.ts",
+            "polyfills": "projects/samon-persian-demo-app/src/polyfills.ts",
+            "tsConfig": "projects/samon-persian-demo-app/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/samon-persian-demo-app/src/favicon.ico",
+              "projects/samon-persian-demo-app/src/assets"
+            ],
+            "styles": [
+              "projects/samon-persian-demo-app/src/styles.sass"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/samon-persian-demo-app/src/environments/environment.ts",
+                  "with": "projects/samon-persian-demo-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "samon-persian-demo-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "samon-persian-demo-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "samon-persian-demo-app:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/samon-persian-demo-app/src/test.ts",
+            "polyfills": "projects/samon-persian-demo-app/src/polyfills.ts",
+            "tsConfig": "projects/samon-persian-demo-app/tsconfig.spec.json",
+            "karmaConfig": "projects/samon-persian-demo-app/karma.conf.js",
+            "assets": [
+              "projects/samon-persian-demo-app/src/favicon.ico",
+              "projects/samon-persian-demo-app/src/assets"
+            ],
+            "styles": [
+              "projects/samon-persian-demo-app/src/styles.sass"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/samon-persian-demo-app/tsconfig.app.json",
+              "projects/samon-persian-demo-app/tsconfig.spec.json",
+              "projects/samon-persian-demo-app/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/samon-persian-demo-app/e2e/protractor.conf.js",
+            "devServerTarget": "samon-persian-demo-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "samon-persian-demo-app:serve:production"
+            }
+          }
+        }
+      }
     }
   },
   "defaultProject": "samon-persian-numbers"

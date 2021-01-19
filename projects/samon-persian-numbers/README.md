@@ -1,24 +1,35 @@
 # SamonPersianNumbers
 
+There are usefull pipes in this library that makes life easier for persian angular developers.
+
+
+
+# Build with
+
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.9.
 
-## Code scaffolding
+# Pipes
 
-Run `ng generate component component-name --project samon-persian-numbers` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project samon-persian-numbers`.
-> Note: Don't forget to add `--project samon-persian-numbers` or else it will be added to the default project in your `angular.json` file. 
+## EngToPer Pipe
 
-## Build
+This pipe get a string or number input value and export it to a persian string digit.
 
-Run `ng build samon-persian-numbers` to build the project. The build artifacts will be stored in the `dist/` directory.
+### How to use it?
 
-## Publishing
+In the templete: 
+`<p>{{1234567890 | EngToPer}}</p>`
+Result: 
+۱۲۳۴۵۶۷۸۹۰
 
-After building your library with `ng build samon-persian-numbers`, go to the dist folder `cd dist/samon-persian-numbers` and run `npm publish`.
+## Rial Pipe
 
-## Running unit tests
+This pipe get Rial as a number input value and divide it by 10 and return the result as number.
 
-Run `ng test samon-persian-numbers` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### How to use it?
 
-## Further help
+In the templete: 
+`<p>{{1234567890 | RialToToman}}</p>`
+Result: 
+123456789
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
