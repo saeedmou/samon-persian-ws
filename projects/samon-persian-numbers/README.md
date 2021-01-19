@@ -1,4 +1,4 @@
-# SamonPersianNumbers
+# Samon Persian Numbers Library
 
 There are usefull pipes in this library that makes life easier for persian angular developers.
 
