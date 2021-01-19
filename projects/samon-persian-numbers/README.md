@@ -2,7 +2,13 @@
 
 There are usefull pipes in this library that makes life easier for persian angular developers.
 
-
+- [Samon Persian Numbers Library](#samon-persian-numbers-library)
+- [Build with](#build-with)
+- [Pipes](#pipes)
+  - [EngToPer Pipe](#engtoper-pipe)
+    - [How to use it?](#how-to-use-it)
+  - [Rial Pipe](#rial-pipe)
+    - [How to use it?](#how-to-use-it-1)
 
 # Build with
 
