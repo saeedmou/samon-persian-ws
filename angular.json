@@ -3,5 +3,46 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "samon-persian-numbers": {
+      "projectType": "library",
+      "root": "projects/samon-persian-numbers",
+      "sourceRoot": "projects/samon-persian-numbers/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/samon-persian-numbers/tsconfig.lib.json",
+            "project": "projects/samon-persian-numbers/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/samon-persian-numbers/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/samon-persian-numbers/src/test.ts",
+            "tsConfig": "projects/samon-persian-numbers/tsconfig.spec.json",
+            "karmaConfig": "projects/samon-persian-numbers/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/samon-persian-numbers/tsconfig.lib.json",
+              "projects/samon-persian-numbers/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "samon-persian-numbers"
 }
