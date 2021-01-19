@@ -24,20 +24,20 @@ This pipe get a string or number input value and export it to a persian string d
 
 ### How to use it?
 
-In the templete: 
-`<p>{{1234567890 | EngToPer}}</p>`
-Result: 
+In the templete: </br>
+`<p>{{1234567890 | EngToPer}}</p>`</br>
+Result: </br>
 ۱۲۳۴۵۶۷۸۹۰
 
-## Rial Pipe
+## RialToToman Pipe
 
 This pipe get Rial as a number input value and divide it by 10 and return the result as number.
 
 ### How to use it?
 
-In the templete: 
-`<p>{{1234567890 | RialToToman}}</p>`
-Result: 
+In the templete: </br>
+`<p>{{1234567890 | RialToToman}}</p>`</br>
+Result: </br>
 123456789
 
 
